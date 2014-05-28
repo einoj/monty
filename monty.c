@@ -21,16 +21,23 @@ int main(void) {
         for (j = 0; j < 3; j++) {
             if ( doors[j] == 0 && j != choice) {
                 //monty opens door and player always swaps
+
+                //closed | choice | closed
                 if ( j == 0 && choice == 1) {
                     choice = 2;
+                //closed | open | choice 
                 }else if ( j == 1 && choice == 2) {
                     choice = 0;
+                //choice | closed | open
                 }else if ( j == 2 && choice == 0) {
                     choice = 1;
+                //choice | open | closed 
                 } else if ( j == 1 && choice == 0) {
                     choice = 2;
+                //closed | choice | open
                 } else if ( j == 2 && choice == 1) {
                     choice = 0;
+                //open | closed | choice
                 } else if ( j == 0 && choice == 2) {
                     choice = 1;
                 }
