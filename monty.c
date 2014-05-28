@@ -7,14 +7,17 @@ int main(void) {
     int i, j;
     int *doors;
     int choice;
-    srand(time(0));
+    srand(time(NULL));
     for (i = 0; i < 1000000; i++) {
         doors = malloc(3*sizeof(int));
         for (j = 0; j < 3; j++) {
+            //initialize to zero
             doors[j] = 0;
         }
+        // put prize behind random door
         doors[random()%3] = 1;
-        choice = random()%3;
+        // choose a door
+        choice = 0 ;//random()%3;
         for (j = 0; j < 3; j++) {
             if ( doors[j] == 0 && j != choice) {
                 //monty opens door and player always swaps
