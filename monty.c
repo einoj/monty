@@ -17,7 +17,7 @@ int main(void) {
         // put prize behind random door
         doors[random()%3] = 1;
         // choose a door
-        choice = 0 ;//random()%3;
+        choice = random()%3;
         for (j = 0; j < 3; j++) {
             if ( doors[j] == 0 && j != choice) {
                 //monty opens door and player always swaps
@@ -26,6 +26,12 @@ int main(void) {
                 }else if ( j == 1 && choice == 2) {
                     choice = 0;
                 }else if ( j == 2 && choice == 0) {
+                    choice = 1;
+                } else if ( j == 1 && choice == 0) {
+                    choice = 2;
+                } else if ( j == 2 && choice == 1) {
+                    choice = 0;
+                } else if ( j == 0 && choice == 2) {
                     choice = 1;
                 }
                 if (doors[choice] == 1) {
