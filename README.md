@@ -7,5 +7,5 @@ of three doors, then randomly picks a door.
 and the player always switches its choice.
 The process is run a million times, and
 afterwards percentage of wins is printed.
-It turns out to be ~66.6% wins as predicted
+It turns out to be ~66.6% wins, as predicted
 by the Monty Hall problem.
